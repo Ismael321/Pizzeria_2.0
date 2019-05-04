@@ -39,5 +39,12 @@ namespace Pizzaria_eddy
             Ordenar.ordenar Objeto = new Ordenar.ordenar();
             Objeto.Show();
         }
+
+        private void buttonFacturas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Facturas.Facturas Objeto = new Facturas.Facturas();
+            Objeto.Show();
+        }
     }
 }

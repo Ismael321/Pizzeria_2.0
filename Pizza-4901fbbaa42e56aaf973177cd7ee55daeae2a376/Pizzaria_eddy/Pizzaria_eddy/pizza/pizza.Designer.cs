@@ -41,20 +41,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(106, 250);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 18);
+            this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ordenar";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(430, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 18);
+            this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Facturas";
             // 
@@ -70,8 +70,9 @@
             // 
             // salirToolStripMenuItem
             // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -83,6 +84,7 @@
             this.buttonFacturas.Size = new System.Drawing.Size(187, 186);
             this.buttonFacturas.TabIndex = 6;
             this.buttonFacturas.UseVisualStyleBackColor = true;
+            this.buttonFacturas.Click += new System.EventHandler(this.buttonFacturas_Click);
             // 
             // buttonPizza
             // 

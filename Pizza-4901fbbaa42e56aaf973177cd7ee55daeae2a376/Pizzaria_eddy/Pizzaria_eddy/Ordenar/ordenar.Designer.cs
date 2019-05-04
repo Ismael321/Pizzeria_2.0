@@ -84,7 +84,7 @@
             // 
             // Box_tamano
             // 
-            this.Box_tamano.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Box_tamano.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Box_tamano.FormattingEnabled = true;
             this.Box_tamano.Items.AddRange(new object[] {
             "Chica",
@@ -93,7 +93,7 @@
             this.Box_tamano.Location = new System.Drawing.Point(235, 166);
             this.Box_tamano.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Box_tamano.Name = "Box_tamano";
-            this.Box_tamano.Size = new System.Drawing.Size(150, 23);
+            this.Box_tamano.Size = new System.Drawing.Size(150, 24);
             this.Box_tamano.TabIndex = 1;
             this.Box_tamano.Text = " Seleccione Una Opcion";
             this.Box_tamano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_tamano_KeyPress);
@@ -235,7 +235,7 @@
             // 
             // SaborCBX
             // 
-            this.SaborCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.SaborCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaborCBX.FormattingEnabled = true;
             this.SaborCBX.Items.AddRange(new object[] {
             "Coca-Cola",
@@ -245,14 +245,14 @@
             this.SaborCBX.Location = new System.Drawing.Point(52, 420);
             this.SaborCBX.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SaborCBX.Name = "SaborCBX";
-            this.SaborCBX.Size = new System.Drawing.Size(70, 23);
+            this.SaborCBX.Size = new System.Drawing.Size(70, 24);
             this.SaborCBX.TabIndex = 8;
             this.SaborCBX.Text = "Sabor";
             this.SaborCBX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SaborCBX_KeyPress);
             // 
             // TamanoCBX
             // 
-            this.TamanoCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.TamanoCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TamanoCBX.FormattingEnabled = true;
             this.TamanoCBX.Items.AddRange(new object[] {
             "Chica 355ml",
@@ -261,14 +261,14 @@
             this.TamanoCBX.Location = new System.Drawing.Point(180, 420);
             this.TamanoCBX.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TamanoCBX.Name = "TamanoCBX";
-            this.TamanoCBX.Size = new System.Drawing.Size(114, 23);
+            this.TamanoCBX.Size = new System.Drawing.Size(114, 24);
             this.TamanoCBX.TabIndex = 9;
             this.TamanoCBX.Text = "Tamaño";
             this.TamanoCBX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TamanoCBX_KeyPress);
             // 
             // CantidadCBX
             // 
-            this.CantidadCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.CantidadCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CantidadCBX.FormattingEnabled = true;
             this.CantidadCBX.Items.AddRange(new object[] {
             "1",
@@ -279,7 +279,7 @@
             this.CantidadCBX.Location = new System.Drawing.Point(351, 420);
             this.CantidadCBX.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CantidadCBX.Name = "CantidadCBX";
-            this.CantidadCBX.Size = new System.Drawing.Size(117, 23);
+            this.CantidadCBX.Size = new System.Drawing.Size(117, 24);
             this.CantidadCBX.TabIndex = 10;
             this.CantidadCBX.Text = "0";
             this.CantidadCBX.SelectedIndexChanged += new System.EventHandler(this.CantidadCBX_SelectedIndexChanged);
@@ -342,7 +342,7 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancelar.Location = new System.Drawing.Point(641, 565);
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
@@ -353,6 +353,7 @@
             // 
             // buttonRegresar
             // 
+            this.buttonRegresar.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegresar.Location = new System.Drawing.Point(762, 565);
             this.buttonRegresar.Name = "buttonRegresar";
             this.buttonRegresar.Size = new System.Drawing.Size(75, 23);
@@ -398,7 +399,7 @@
             // 
             // TipoCBX
             // 
-            this.TipoCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.TipoCBX.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoCBX.FormattingEnabled = true;
             this.TipoCBX.Items.AddRange(new object[] {
             "Hawaiana",
@@ -407,7 +408,7 @@
             "Vegetariana"});
             this.TipoCBX.Location = new System.Drawing.Point(52, 166);
             this.TipoCBX.Name = "TipoCBX";
-            this.TipoCBX.Size = new System.Drawing.Size(130, 23);
+            this.TipoCBX.Size = new System.Drawing.Size(130, 24);
             this.TipoCBX.TabIndex = 0;
             this.TipoCBX.Text = " Seleccione Una Opcion";
             this.TipoCBX.SelectedIndexChanged += new System.EventHandler(this.TipoCBX_SelectedIndexChanged);
