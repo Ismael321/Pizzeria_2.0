@@ -66,6 +66,7 @@
     <Compile Include="Ordenar\ordenar.Designer.cs">
       <DependentUpon>ordenar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ordenar\slnOrdenar.cs" />
     <Compile Include="pizza\pizza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\pizza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baterias-celulares-D_NP_910404-MLM28489142012_102018-Q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\180.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eddy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\help_opt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,36 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pizza));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.buttonFacturas = new System.Windows.Forms.Button();
+            this.buttonPizza = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 184);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(372, 46);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(186, 184);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -97,15 +75,35 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // buttonFacturas
+            // 
+            this.buttonFacturas.Image = global::Pizzaria_eddy.Properties.Resources._180;
+            this.buttonFacturas.Location = new System.Drawing.Point(375, 45);
+            this.buttonFacturas.Name = "buttonFacturas";
+            this.buttonFacturas.Size = new System.Drawing.Size(187, 186);
+            this.buttonFacturas.TabIndex = 6;
+            this.buttonFacturas.UseVisualStyleBackColor = true;
+            // 
+            // buttonPizza
+            // 
+            this.buttonPizza.Image = global::Pizzaria_eddy.Properties.Resources.baterias_celulares_D_NP_910404_MLM28489142012_102018_Q;
+            this.buttonPizza.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonPizza.Location = new System.Drawing.Point(61, 45);
+            this.buttonPizza.Name = "buttonPizza";
+            this.buttonPizza.Size = new System.Drawing.Size(186, 186);
+            this.buttonPizza.TabIndex = 5;
+            this.buttonPizza.UseVisualStyleBackColor = true;
+            this.buttonPizza.Click += new System.EventHandler(this.buttonPizza_Click);
+            // 
             // pizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 315);
+            this.Controls.Add(this.buttonFacturas);
+            this.Controls.Add(this.buttonPizza);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -114,8 +112,6 @@
             this.Text = "Pizza Eddy\'s";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.pizza_FormClosing);
             this.Load += new System.EventHandler(this.pizza_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -124,12 +120,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.Button buttonPizza;
+        private System.Windows.Forms.Button buttonFacturas;
     }
 }

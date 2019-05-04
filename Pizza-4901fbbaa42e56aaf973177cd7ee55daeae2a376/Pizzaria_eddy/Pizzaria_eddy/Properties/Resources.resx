@@ -118,7 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="help_opt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\help_opt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="180" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baterias-celulares-D_NP_910404-MLM28489142012_102018-Q" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baterias-celulares-D_NP_910404-MLM28489142012_102018-Q.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\pizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eddy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eddy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_opt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\help_opt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

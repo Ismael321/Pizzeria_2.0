@@ -27,15 +27,17 @@ namespace Pizzaria_eddy
             new inicio().Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Ordenar.ordenar().Show();
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonPizza_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Ordenar.ordenar Objeto = new Ordenar.ordenar();
+            Objeto.Show();
         }
     }
 }

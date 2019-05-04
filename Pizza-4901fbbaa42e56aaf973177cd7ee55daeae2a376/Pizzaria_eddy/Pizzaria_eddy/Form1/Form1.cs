@@ -18,7 +18,7 @@ namespace Pizzaria_eddy
             InitializeComponent();
         }
         // se crea la coneccion de base de datos
-        SqlConnection coneccion = new SqlConnection("Data Source=DESKTOP-0296OVT;Initial Catalog=Pizza;Integrated Security=True");
+        SqlConnection coneccion = new SqlConnection("Data Source=TOLOSA;Initial Catalog=Pizza;Persist Security Info=True;User ID=IsmaDB;Password=1234");
         
         // se crea el metodo para logear y recive por parametros el usuario y la contrasena 
         public void logeo( string usuario, string contrasena)
@@ -75,7 +75,7 @@ namespace Pizzaria_eddy
         }
         private void inicio_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
