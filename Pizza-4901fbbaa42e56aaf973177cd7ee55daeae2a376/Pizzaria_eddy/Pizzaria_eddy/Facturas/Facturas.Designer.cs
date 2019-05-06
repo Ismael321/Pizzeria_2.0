@@ -116,7 +116,6 @@
             // tb_noFactura
             // 
             this.tb_noFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_noFactura.Location = new System.Drawing.Point(10, 54);
             this.tb_noFactura.Location = new System.Drawing.Point(10, 53);
             this.tb_noFactura.Name = "tb_noFactura";
             this.tb_noFactura.Size = new System.Drawing.Size(144, 19);
@@ -175,7 +174,6 @@
             this.tb_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_Cliente.Location = new System.Drawing.Point(75, 22);
             this.tb_Cliente.Name = "tb_Cliente";
-            this.tb_Cliente.Size = new System.Drawing.Size(562, 19);
             this.tb_Cliente.Size = new System.Drawing.Size(292, 19);
             this.tb_Cliente.TabIndex = 2;
             // 
@@ -272,7 +270,6 @@
             // TB_total
             // 
             this.TB_total.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_total.Location = new System.Drawing.Point(868, 57);
             this.TB_total.Location = new System.Drawing.Point(661, 65);
             this.TB_total.Name = "TB_total";
             this.TB_total.Size = new System.Drawing.Size(110, 19);
@@ -287,22 +284,6 @@
             this.TB_importeLetra.TabIndex = 2;
             // 
             // lbl_Total
-            // 
-            this.lbl_Total.AutoSize = true;
-            this.lbl_Total.Location = new System.Drawing.Point(907, 97);
-            this.lbl_Total.Name = "lbl_Total";
-            this.lbl_Total.Size = new System.Drawing.Size(44, 19);
-            this.lbl_Total.TabIndex = 1;
-            this.lbl_Total.Text = "Total";
-            // 
-            // lbl_importeLetra
-            // 
-            this.lbl_importeLetra.AutoSize = true;
-            this.lbl_importeLetra.Location = new System.Drawing.Point(6, 22);
-            this.lbl_importeLetra.Name = "lbl_importeLetra";
-            this.lbl_importeLetra.Size = new System.Drawing.Size(133, 19);
-            this.lbl_importeLetra.TabIndex = 0;
-            this.lbl_importeLetra.Text = "Importe Con Letra";
             // 
             this.lbl_Total.AutoSize = true;
             this.lbl_Total.Location = new System.Drawing.Point(691, 87);
@@ -335,7 +316,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 711);
             this.ClientSize = new System.Drawing.Size(841, 683);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Cb_total);
@@ -351,7 +331,7 @@
             this.Name = "Facturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pizza Eddy\'s";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Facturas_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Facturas_FormClosed);
             this.Load += new System.EventHandler(this.Facturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GB_factura.ResumeLayout(false);

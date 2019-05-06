@@ -50,8 +50,6 @@ namespace Pizzaria_eddy.Ordenar
         {
             Facturas.Facturas Objeto = new Facturas.Facturas();
             Objeto.ShowDialog();
-            this.Hide();
-            new Facturas.Facturas().Show();
         }
         #region Limpiar Cajas
         void LimpiarCajas()
