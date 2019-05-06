@@ -48,7 +48,8 @@ namespace Pizzaria_eddy.Ordenar
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Facturas.Facturas().Show();
         }
         #region Limpiar Cajas
         void LimpiarCajas()

@@ -27,5 +27,11 @@ namespace Pizzaria_eddy.Facturas
             this.Hide();
             new pizza().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Ordenar.ordenar().Show();
+        }
     }
 }
