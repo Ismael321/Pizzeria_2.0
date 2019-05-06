@@ -74,3 +74,4 @@ C:\Users\pepin\Documents\GitHub\Pizzeria_2.0\Pizza-4901fbbaa42e56aaf973177cd7ee5
 C:\Users\pepin\Documents\GitHub\Pizzeria_2.0\Pizza-4901fbbaa42e56aaf973177cd7ee55daeae2a376\Pizzaria_eddy\Pizzaria_eddy\obj\Debug\Pizzaria_eddy.exe
 C:\Users\pepin\Documents\GitHub\Pizzeria_2.0\Pizza-4901fbbaa42e56aaf973177cd7ee55daeae2a376\Pizzaria_eddy\Pizzaria_eddy\obj\Debug\Pizzaria_eddy.pdb
 C:\Users\pepin\Documents\GitHub\Pizzeria_2.0\Pizza-4901fbbaa42e56aaf973177cd7ee55daeae2a376\Pizzaria_eddy\Pizzaria_eddy\obj\Debug\Pizzaria_eddy.Facturas.Facturas.resources
+C:\Users\Sam's\Documents\GitHub\Pizzeria_2.0\Pizza-4901fbbaa42e56aaf973177cd7ee55daeae2a376\Pizzaria_eddy\Pizzaria_eddy\obj\Debug\Pizzaria_eddy.Facturas.Facturas.resources
