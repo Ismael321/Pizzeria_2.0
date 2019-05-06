@@ -54,9 +54,9 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(430, 250);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.Size = new System.Drawing.Size(53, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Facturas";
+            this.label2.Text = "Ventas";
             // 
             // menuStrip1
             // 

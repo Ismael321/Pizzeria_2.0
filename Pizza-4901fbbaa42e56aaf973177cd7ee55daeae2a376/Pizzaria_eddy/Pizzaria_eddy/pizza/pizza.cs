@@ -43,7 +43,7 @@ namespace Pizzaria_eddy
         private void buttonFacturas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Facturas.Facturas Objeto = new Facturas.Facturas();
+            Ventas.Ventas Objeto = new Ventas.Ventas();
             Objeto.Show();
         }
     }

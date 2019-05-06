@@ -54,6 +54,7 @@
             this.TB_importeLetra = new System.Windows.Forms.TextBox();
             this.lbl_Total = new System.Windows.Forms.Label();
             this.lbl_importeLetra = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GB_factura.SuspendLayout();
             this.gb_Fecha.SuspendLayout();
@@ -116,6 +117,7 @@
             // 
             this.tb_noFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_noFactura.Location = new System.Drawing.Point(10, 54);
+            this.tb_noFactura.Location = new System.Drawing.Point(10, 53);
             this.tb_noFactura.Name = "tb_noFactura";
             this.tb_noFactura.Size = new System.Drawing.Size(144, 19);
             this.tb_noFactura.TabIndex = 1;
@@ -162,7 +164,7 @@
             this.gb_DatosUsuario.Controls.Add(this.tb_Cliente);
             this.gb_DatosUsuario.Controls.Add(this.lbl_cliente);
             this.gb_DatosUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_DatosUsuario.Location = new System.Drawing.Point(12, 228);
+            this.gb_DatosUsuario.Location = new System.Drawing.Point(12, 222);
             this.gb_DatosUsuario.Name = "gb_DatosUsuario";
             this.gb_DatosUsuario.Size = new System.Drawing.Size(1003, 59);
             this.gb_DatosUsuario.TabIndex = 6;
@@ -174,6 +176,7 @@
             this.tb_Cliente.Location = new System.Drawing.Point(75, 22);
             this.tb_Cliente.Name = "tb_Cliente";
             this.tb_Cliente.Size = new System.Drawing.Size(562, 19);
+            this.tb_Cliente.Size = new System.Drawing.Size(292, 19);
             this.tb_Cliente.TabIndex = 2;
             // 
             // lbl_cliente
@@ -194,7 +197,7 @@
             this.gb_Cantidad.Controls.Add(this.lbl_descripcion);
             this.gb_Cantidad.Controls.Add(this.lbl_cantidad);
             this.gb_Cantidad.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_Cantidad.Location = new System.Drawing.Point(12, 311);
+            this.gb_Cantidad.Location = new System.Drawing.Point(12, 296);
             this.gb_Cantidad.Name = "gb_Cantidad";
             this.gb_Cantidad.Size = new System.Drawing.Size(1003, 194);
             this.gb_Cantidad.TabIndex = 7;
@@ -260,7 +263,7 @@
             this.Cb_total.Controls.Add(this.lbl_Total);
             this.Cb_total.Controls.Add(this.lbl_importeLetra);
             this.Cb_total.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cb_total.Location = new System.Drawing.Point(12, 539);
+            this.Cb_total.Location = new System.Drawing.Point(12, 496);
             this.Cb_total.Name = "Cb_total";
             this.Cb_total.Size = new System.Drawing.Size(1003, 119);
             this.Cb_total.TabIndex = 8;
@@ -270,6 +273,7 @@
             // 
             this.TB_total.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TB_total.Location = new System.Drawing.Point(868, 57);
+            this.TB_total.Location = new System.Drawing.Point(661, 65);
             this.TB_total.Name = "TB_total";
             this.TB_total.Size = new System.Drawing.Size(110, 19);
             this.TB_total.TabIndex = 3;
@@ -300,11 +304,40 @@
             this.lbl_importeLetra.TabIndex = 0;
             this.lbl_importeLetra.Text = "Importe Con Letra";
             // 
+            this.lbl_Total.AutoSize = true;
+            this.lbl_Total.Location = new System.Drawing.Point(691, 87);
+            this.lbl_Total.Name = "lbl_Total";
+            this.lbl_Total.Size = new System.Drawing.Size(44, 19);
+            this.lbl_Total.TabIndex = 1;
+            this.lbl_Total.Text = "Total";
+            // 
+            // lbl_importeLetra
+            // 
+            this.lbl_importeLetra.AutoSize = true;
+            this.lbl_importeLetra.Location = new System.Drawing.Point(6, 22);
+            this.lbl_importeLetra.Name = "lbl_importeLetra";
+            this.lbl_importeLetra.Size = new System.Drawing.Size(133, 19);
+            this.lbl_importeLetra.TabIndex = 0;
+            this.lbl_importeLetra.Text = "Importe Con Letra";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(738, 637);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Confirmar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 711);
+            this.ClientSize = new System.Drawing.Size(841, 683);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Cb_total);
             this.Controls.Add(this.gb_Cantidad);
             this.Controls.Add(this.gb_DatosUsuario);
@@ -363,5 +396,6 @@
         private System.Windows.Forms.Label lbl_importeLetra;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
