@@ -30,10 +30,9 @@ namespace Pizzaria_eddy.Ordenar
 
         void EnabledBox()
         {
-            Ingrediente1CBX.Enabled = false;
-            Ingrediente2CBX.Enabled = false;
-            Ingrediente3CBX.Enabled = false;
+            Ingrediente1CBX.Enabled = false; Ingrediente2CBX.Enabled = false; Ingrediente3CBX.Enabled = false;
             Ingrediente4CBX.Enabled = false;
+            DesHabilitarDom();
         }
         private void ordenar_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -48,8 +47,21 @@ namespace Pizzaria_eddy.Ordenar
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            Facturas.Facturas Objeto = new Facturas.Facturas();
-            Objeto.ShowDialog();
+            if (txtNombre.Text.Trim().ToString().Equals("")) {MessageBox.Show("Ingrese Nombre del Cliente"); return;}
+            else if (txtxCostoTotal.Text.Trim().ToString().Equals("0")) { MessageBox.Show("No existe Orden a facturar, saldo en '0'"); return; }
+            else
+            {
+                DialogResult Resultado;
+                Resultado = MessageBox.Show("Orden finalizada ¿Todos los datos estan correctos?","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Resultado == DialogResult.Yes)
+                {
+                    Facturas.Facturas Objeto = new Facturas.Facturas();
+                    Objeto.ShowDialog();
+                    LimpiarCajas();
+                }
+                else
+                { MessageBox.Show("          Orden no Generada, Cheque el pedido             "); }
+            }
         }
         #region Limpiar Cajas
         void LimpiarCajas()
@@ -68,6 +80,8 @@ namespace Pizzaria_eddy.Ordenar
             txtTotal.Text = "0";
             txtRefrescos.Text = "0";
             txtxCostoTotal.Text = "0";
+            txtNombre.Text = "";
+            DesHabilitarDom();
         }
         #endregion
 
@@ -196,6 +210,10 @@ namespace Pizzaria_eddy.Ordenar
         {
             e.Handled = true;
         }
+        private void TipoCBX_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
         private void Si_radiobutton_CheckedChanged(object sender, EventArgs e)
         {
             if(Si_radiobutton.AutoCheck == true)
@@ -218,11 +236,6 @@ namespace Pizzaria_eddy.Ordenar
         #endregion
         #region Validar Letras
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Ordenar.slnOrdenar.SoloLetras(e);
-        }
-
-        private void TipoCBX_KeyPress(object sender, KeyPressEventArgs e)
         {
             Ordenar.slnOrdenar.SoloLetras(e);
         }
@@ -458,6 +471,37 @@ namespace Pizzaria_eddy.Ordenar
             int Total = 0;
             Total = int.Parse(txtTotal.Text) + int.Parse(txtRefrescos.Text);
             txtxCostoTotal.Text = Total.ToString();
+        }
+        void DesHabilitarDom()
+        {
+            txtDomicilio.Enabled = false; txtDomicilio.Text = ""; txtNumero.Enabled = false; txtNumero.Text = "";
+            txtCalle.Enabled = false; txtCalle.Text = ""; txtCalle2.Enabled = false; txtCalle2.Text = "";
+            richtextComentario.Enabled = false; richtextComentario.Text = "";
+            LabelDomicilio.Enabled = false; LabelNumero.Enabled = false; LabelCalle.Enabled = false;
+            LabelY.Enabled = false; LabelComentarios.Enabled = false;
+        }
+        private void Si_RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(Si_RadioButton2.AutoCheck == true)
+            {
+                txtDomicilio.Enabled = true; txtNumero.Enabled = true; txtCalle.Enabled = true; txtCalle2.Enabled = true;
+                richtextComentario.Enabled = true;
+                LabelDomicilio.Enabled = true; LabelNumero.Enabled = true; LabelCalle.Enabled = true;
+                LabelY.Enabled = true; LabelComentarios.Enabled = true;
+            }
+        }
+
+        private void No_RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if(No_RadioButton2.AutoCheck == true)
+            {
+                DesHabilitarDom();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LabelTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }

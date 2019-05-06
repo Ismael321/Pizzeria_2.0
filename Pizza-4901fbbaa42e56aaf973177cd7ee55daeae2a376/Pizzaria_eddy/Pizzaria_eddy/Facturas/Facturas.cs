@@ -25,12 +25,10 @@ namespace Pizzaria_eddy.Facturas
         private void Facturas_FormClosing(object sender, FormClosingEventArgs e)
         {
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void Facturas_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();

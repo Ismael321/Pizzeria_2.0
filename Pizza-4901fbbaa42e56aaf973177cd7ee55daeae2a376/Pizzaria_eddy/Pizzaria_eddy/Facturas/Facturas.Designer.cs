@@ -34,13 +34,12 @@
             this.lbl_rfc = new System.Windows.Forms.Label();
             this.Lbl_revolucion = new System.Windows.Forms.Label();
             this.GB_factura = new System.Windows.Forms.GroupBox();
-            this.tb_noFactura = new System.Windows.Forms.TextBox();
+            this.txtNFactura = new System.Windows.Forms.TextBox();
             this.lbl_factura = new System.Windows.Forms.Label();
             this.gb_Fecha = new System.Windows.Forms.GroupBox();
             this.lbl_fechaFactura = new System.Windows.Forms.Label();
-            this.tb_fechaFactura = new System.Windows.Forms.TextBox();
             this.gb_DatosUsuario = new System.Windows.Forms.GroupBox();
-            this.tb_Cliente = new System.Windows.Forms.TextBox();
+            this.txtCliente = new System.Windows.Forms.TextBox();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.gb_Cantidad = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,6 +54,8 @@
             this.lbl_Total = new System.Windows.Forms.Label();
             this.lbl_importeLetra = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GB_factura.SuspendLayout();
             this.gb_Fecha.SuspendLayout();
@@ -104,7 +105,7 @@
             // 
             // GB_factura
             // 
-            this.GB_factura.Controls.Add(this.tb_noFactura);
+            this.GB_factura.Controls.Add(this.txtNFactura);
             this.GB_factura.Controls.Add(this.lbl_factura);
             this.GB_factura.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GB_factura.Location = new System.Drawing.Point(831, 31);
@@ -113,13 +114,13 @@
             this.GB_factura.TabIndex = 4;
             this.GB_factura.TabStop = false;
             // 
-            // tb_noFactura
+            // txtNFactura
             // 
-            this.tb_noFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_noFactura.Location = new System.Drawing.Point(10, 53);
-            this.tb_noFactura.Name = "tb_noFactura";
-            this.tb_noFactura.Size = new System.Drawing.Size(144, 19);
-            this.tb_noFactura.TabIndex = 1;
+            this.txtNFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNFactura.Location = new System.Drawing.Point(10, 53);
+            this.txtNFactura.Name = "txtNFactura";
+            this.txtNFactura.Size = new System.Drawing.Size(144, 19);
+            this.txtNFactura.TabIndex = 1;
             // 
             // lbl_factura
             // 
@@ -132,8 +133,8 @@
             // 
             // gb_Fecha
             // 
+            this.gb_Fecha.Controls.Add(this.dateTimePicker1);
             this.gb_Fecha.Controls.Add(this.lbl_fechaFactura);
-            this.gb_Fecha.Controls.Add(this.tb_fechaFactura);
             this.gb_Fecha.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_Fecha.Location = new System.Drawing.Point(831, 135);
             this.gb_Fecha.Name = "gb_Fecha";
@@ -150,17 +151,9 @@
             this.lbl_fechaFactura.TabIndex = 1;
             this.lbl_fechaFactura.Text = "Fecha";
             // 
-            // tb_fechaFactura
-            // 
-            this.tb_fechaFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_fechaFactura.Location = new System.Drawing.Point(10, 53);
-            this.tb_fechaFactura.Name = "tb_fechaFactura";
-            this.tb_fechaFactura.Size = new System.Drawing.Size(144, 19);
-            this.tb_fechaFactura.TabIndex = 0;
-            // 
             // gb_DatosUsuario
             // 
-            this.gb_DatosUsuario.Controls.Add(this.tb_Cliente);
+            this.gb_DatosUsuario.Controls.Add(this.txtCliente);
             this.gb_DatosUsuario.Controls.Add(this.lbl_cliente);
             this.gb_DatosUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DatosUsuario.Location = new System.Drawing.Point(12, 222);
@@ -169,13 +162,13 @@
             this.gb_DatosUsuario.TabIndex = 6;
             this.gb_DatosUsuario.TabStop = false;
             // 
-            // tb_Cliente
+            // txtCliente
             // 
-            this.tb_Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_Cliente.Location = new System.Drawing.Point(75, 22);
-            this.tb_Cliente.Name = "tb_Cliente";
-            this.tb_Cliente.Size = new System.Drawing.Size(292, 19);
-            this.tb_Cliente.TabIndex = 2;
+            this.txtCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCliente.Location = new System.Drawing.Point(75, 22);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(292, 19);
+            this.txtCliente.TabIndex = 2;
             // 
             // lbl_cliente
             // 
@@ -188,6 +181,7 @@
             // 
             // gb_Cantidad
             // 
+            this.gb_Cantidad.Controls.Add(this.label3);
             this.gb_Cantidad.Controls.Add(this.label2);
             this.gb_Cantidad.Controls.Add(this.label1);
             this.gb_Cantidad.Controls.Add(this.lbl_costoTotal);
@@ -312,11 +306,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(121, 26);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(117, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 19);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Todo Meco by Tolosa";
+            // 
             // Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 683);
+            this.ClientSize = new System.Drawing.Size(1026, 683);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Cb_total);
             this.Controls.Add(this.gb_Cantidad);
@@ -356,14 +368,13 @@
         private System.Windows.Forms.Label lbl_rfc;
         private System.Windows.Forms.Label Lbl_revolucion;
         private System.Windows.Forms.GroupBox GB_factura;
-        private System.Windows.Forms.TextBox tb_noFactura;
+        private System.Windows.Forms.TextBox txtNFactura;
         private System.Windows.Forms.Label lbl_factura;
         private System.Windows.Forms.GroupBox gb_Fecha;
         private System.Windows.Forms.Label lbl_fechaFactura;
-        private System.Windows.Forms.TextBox tb_fechaFactura;
         private System.Windows.Forms.GroupBox gb_DatosUsuario;
         private System.Windows.Forms.Label lbl_cliente;
-        private System.Windows.Forms.TextBox tb_Cliente;
+        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.GroupBox gb_Cantidad;
         private System.Windows.Forms.Label lbl_cantidad;
         private System.Windows.Forms.Label lbl_costoTotal;
@@ -377,5 +388,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
     }
 }
