@@ -68,7 +68,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(293, 162);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 162);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -76,7 +76,7 @@
             // 
             this.LB_Pizza.AutoSize = true;
             this.LB_Pizza.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_Pizza.Location = new System.Drawing.Point(383, 12);
+            this.LB_Pizza.Location = new System.Drawing.Point(414, 22);
             this.LB_Pizza.Name = "LB_Pizza";
             this.LB_Pizza.Size = new System.Drawing.Size(181, 19);
             this.LB_Pizza.TabIndex = 1;
@@ -86,7 +86,7 @@
             // 
             this.lbl_rfc.AutoSize = true;
             this.lbl_rfc.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rfc.Location = new System.Drawing.Point(383, 31);
+            this.lbl_rfc.Location = new System.Drawing.Point(414, 41);
             this.lbl_rfc.Name = "lbl_rfc";
             this.lbl_rfc.Size = new System.Drawing.Size(156, 19);
             this.lbl_rfc.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.Lbl_revolucion.AutoSize = true;
             this.Lbl_revolucion.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_revolucion.Location = new System.Drawing.Point(383, 50);
+            this.Lbl_revolucion.Location = new System.Drawing.Point(414, 60);
             this.Lbl_revolucion.Name = "Lbl_revolucion";
             this.Lbl_revolucion.Size = new System.Drawing.Size(145, 19);
             this.Lbl_revolucion.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.GB_factura.Controls.Add(this.tb_noFactura);
             this.GB_factura.Controls.Add(this.lbl_factura);
             this.GB_factura.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GB_factura.Location = new System.Drawing.Point(629, 12);
+            this.GB_factura.Location = new System.Drawing.Point(831, 31);
             this.GB_factura.Name = "GB_factura";
             this.GB_factura.Size = new System.Drawing.Size(184, 98);
             this.GB_factura.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.gb_Fecha.Controls.Add(this.lbl_fechaFactura);
             this.gb_Fecha.Controls.Add(this.tb_fechaFactura);
             this.gb_Fecha.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_Fecha.Location = new System.Drawing.Point(629, 116);
+            this.gb_Fecha.Location = new System.Drawing.Point(831, 135);
             this.gb_Fecha.Name = "gb_Fecha";
             this.gb_Fecha.Size = new System.Drawing.Size(184, 91);
             this.gb_Fecha.TabIndex = 5;
@@ -165,7 +165,7 @@
             this.gb_DatosUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DatosUsuario.Location = new System.Drawing.Point(12, 222);
             this.gb_DatosUsuario.Name = "gb_DatosUsuario";
-            this.gb_DatosUsuario.Size = new System.Drawing.Size(801, 59);
+            this.gb_DatosUsuario.Size = new System.Drawing.Size(1003, 59);
             this.gb_DatosUsuario.TabIndex = 6;
             this.gb_DatosUsuario.TabStop = false;
             // 
@@ -197,7 +197,7 @@
             this.gb_Cantidad.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_Cantidad.Location = new System.Drawing.Point(12, 296);
             this.gb_Cantidad.Name = "gb_Cantidad";
-            this.gb_Cantidad.Size = new System.Drawing.Size(801, 194);
+            this.gb_Cantidad.Size = new System.Drawing.Size(1003, 194);
             this.gb_Cantidad.TabIndex = 7;
             this.gb_Cantidad.TabStop = false;
             // 
@@ -263,7 +263,7 @@
             this.Cb_total.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb_total.Location = new System.Drawing.Point(12, 496);
             this.Cb_total.Name = "Cb_total";
-            this.Cb_total.Size = new System.Drawing.Size(801, 119);
+            this.Cb_total.Size = new System.Drawing.Size(1003, 119);
             this.Cb_total.TabIndex = 8;
             this.Cb_total.TabStop = false;
             // 
@@ -331,7 +331,7 @@
             this.Name = "Facturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pizza Eddy\'s";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Facturas_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Facturas_FormClosed);
             this.Load += new System.EventHandler(this.Facturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GB_factura.ResumeLayout(false);

@@ -24,14 +24,16 @@ namespace Pizzaria_eddy.Facturas
 
         private void Facturas_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
-            new pizza().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Ordenar.ordenar().Show();
+            this.Close();
+        }
+
+        private void Facturas_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
