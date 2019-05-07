@@ -56,6 +56,7 @@ namespace Pizzaria_eddy.Conexion
             else if (FilasAfectadas <= 0)
             {
                 Is_Ok = false;
+                MessageBox.Show("No se pudo realizar la Insercio de Datos", "Error del sistema 'CO-59'", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

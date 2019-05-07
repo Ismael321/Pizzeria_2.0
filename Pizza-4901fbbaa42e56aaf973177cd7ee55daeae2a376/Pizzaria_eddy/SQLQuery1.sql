@@ -30,4 +30,26 @@ CREATE TABLE Empleados(
     Fecha_Ingreso date NULL DEFAULT (NULL)
     );
 
-	SELECT *FROM Empleados;
+create Table Pedidos(
+TipoPizza varchar(40),
+NumeroPedido integer identity(1,1) primary key,
+TamanoPizza varchar(40),
+Ingrediente1 varchar(40),
+Ingrediente2 varchar(40),
+Ingrediente3 varchar(40),
+Ingrediente4 varchar(40),
+SaborRefresco varchar(40),
+TamanoRefresco varchar(40),
+CantidadRefresco varchar(40)
+);
+
+create table Factura(
+Nombre varchar(40),
+IdFactura integer identity (110,1) primary key,
+Domicilio varchar(45),
+Num_Dom varchar(15),
+Calle1 varchar(40),
+Calle2 varchar(40),
+Comentarios varchar(120),
+CostoTotal integer
+);

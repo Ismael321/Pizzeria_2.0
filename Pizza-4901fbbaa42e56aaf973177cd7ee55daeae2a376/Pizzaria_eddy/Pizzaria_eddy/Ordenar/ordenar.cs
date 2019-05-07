@@ -17,6 +17,7 @@ namespace Pizzaria_eddy.Ordenar
             InitializeComponent();
         }
         ToolTip Informacion = new ToolTip();
+        Conexion.Conexion ObjetoConexion = new Conexion.Conexion();
         private void ordenar_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -37,17 +38,64 @@ namespace Pizzaria_eddy.Ordenar
         private void ordenar_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
-            new pizza().Show();
         }
 
         private void buttonRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+            new pizza().Show();
         }
-
+        #region Registro DB
+        void Registrar()
+        {
+            ObjetoConexion.Abrir_coneccion();
+            String Tipo = Convert.ToString(TipoCBX.SelectedItem).Trim();
+            if (TipoCBX.Text.ToString() == "Perzonalizada") { Tipo = "Perzonalizada"; }
+            String PizzaTam = Convert.ToString(Box_tamano.SelectedItem).Trim(); String Ing1 = Convert.ToString(Ingrediente1CBX.Text).Trim();
+            String Ing2 = Convert.ToString(Ingrediente2CBX.Text).Trim(); String Ing3 = Convert.ToString(Ingrediente3CBX.Text).Trim(); String Ing4 = Convert.ToString(Ingrediente4CBX.Text).Trim();
+            String SBfresco = Convert.ToString(SaborCBX.SelectedItem).Trim(); String TamRefresco = Convert.ToString(TamanoCBX.SelectedItem).Trim(); String CantidadR = Convert.ToString(CantidadCBX.SelectedItem).Trim();
+            if (Si_radiobutton.Checked == true)
+            {
+                String Query = "insert into Pedidos (TipoPizza, TamanoPizza, Ingrediente1, Ingrediente2, Ingrediente3, Ingrediente4, SaborRefresco, TamanoRefresco, CantidadRefresco) values ('" + Tipo + "','" + PizzaTam + "','" + Ing1 + "','" + Ing2 + "','" + Ing3 + "','" + Ing4 + "','" + SBfresco + "','" + TamRefresco + "'," + CantidadR + ");";
+                ObjetoConexion.EjecutarSql(Query);
+            }
+            else if(No_radiobutton.Checked == true)
+            {
+                String Query = "insert into Pedidos (TipoPizza, TamanoPizza, Ingrediente1, Ingrediente2, Ingrediente3, Ingrediente4) values ('" + Tipo + "','" + PizzaTam + "','" + Ing1 + "','" + Ing2 + "','" + Ing3 + "','" + Ing4 + "');";
+                ObjetoConexion.EjecutarSql(Query);
+            }
+            else
+            {
+                MessageBox.Show("Ah ocurrido un error, Numero de Error O68");return;
+            }
+            ObjetoConexion.Cerrar_Coneccion();
+        }
+        #endregion
+        #region Registro Factura
+        void RFactura()
+        {
+            String Nombre = txtNombre.Text.Trim(); String Domicilio = txtDomicilio.Text.Trim(); String Numero = txtNumero.Text.Trim();
+            String Calle1 = txtCalle.Text.Trim(); String Calle2 = txtCalle2.Text.Trim(); String Comentarios = richtextComentario.Text.Trim();
+            int PTotal = Convert.ToInt32(this.txtxCostoTotal.Text); 
+            if (Si_RadioButton2.Checked == true )
+            {
+                Ordenar.slnOrdenar.RegsitroFacturaDom(Nombre,Domicilio, Numero, Calle1, Calle2,Comentarios, PTotal);
+            }
+            else if(No_RadioButton2.Checked == true)
+            {
+                Ordenar.slnOrdenar.RegistroFacturas(Nombre, PTotal);
+            }
+            else { MessageBox.Show("Algo salio Mal, Numero de Error 'O-87' ");return; }
+        } 
+        #endregion
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text.Trim().ToString().Equals("")) {MessageBox.Show("Ingrese Nombre del Cliente"); return;}
+            if (Box_tamano.Text.Trim().ToString().Equals("Seleccione Una Opcion")) {MessageBox.Show("Tamaño de Pizza no Seleccionada"); return; }
+            else if (IngredientesCBX.Text.Trim().ToString().Equals("0")) { MessageBox.Show("Ingredientes no seleccionados, Elija 1"); return; }
+            else if (SaborCBX.Text.Trim().ToString().Equals("Sabor")) { MessageBox.Show("Apartado Refresco: Sabor no Seleccionado"); return; }
+            else if (TamanoCBX.Text.Trim().ToString().Equals("Tamaño")) { MessageBox.Show("Apartado Refresco: Tamaño no Seleccionado"); return; }
+            else if (CantidadCBX.Text.Trim().ToString().Equals("0")) { MessageBox.Show("Apartado Refresco: Cantidad '0' Asigne Valor"); return; }
+            else if (txtNombre.Text.Trim().ToString().Equals("")) {MessageBox.Show("Ingrese Nombre del Cliente"); return;}
             else if (txtxCostoTotal.Text.Trim().ToString().Equals("0")) { MessageBox.Show("No existe Orden a facturar, saldo en '0'"); return; }
             else
             {
@@ -55,9 +103,11 @@ namespace Pizzaria_eddy.Ordenar
                 Resultado = MessageBox.Show("Orden finalizada ¿Todos los datos estan correctos?","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Resultado == DialogResult.Yes)
                 {
+                    Registrar();
+                    RFactura();
                     Facturas.Facturas Objeto = new Facturas.Facturas();
-                    Objeto.ShowDialog();
-                    LimpiarCajas();
+                    Objeto.Show();
+                    this.Close();
                 }
                 else
                 { MessageBox.Show("          Orden no Generada, Cheque el pedido             "); }
@@ -67,9 +117,9 @@ namespace Pizzaria_eddy.Ordenar
         void LimpiarCajas()
         {
             IngredientesCBX.Enabled = true;
-            TipoCBX.Text = " Seleccione Una Opcion";
-            Box_tamano.Text = " Seleccione Una Opcion";
-            IngredientesCBX.Text = "";
+            TipoCBX.Text = "Seleccione Una Opcion";
+            Box_tamano.Text = "Seleccione Una Opcion";
+            IngredientesCBX.Text = "0";
             Ingrediente1CBX.Text = "";
             Ingrediente2CBX.Text = "";
             Ingrediente3CBX.Text = "";
@@ -81,6 +131,7 @@ namespace Pizzaria_eddy.Ordenar
             txtRefrescos.Text = "0";
             txtxCostoTotal.Text = "0";
             txtNombre.Text = "";
+            No_radiobutton.AutoCheck = true;
             DesHabilitarDom();
         }
         #endregion
@@ -95,9 +146,9 @@ namespace Pizzaria_eddy.Ordenar
                 Ingrediente2CBX.Enabled = false;
                 Ingrediente3CBX.Enabled = false;
                 Ingrediente4CBX.Enabled = false;
-                Ingrediente2CBX.Text = "";
-                Ingrediente3CBX.Text = "";
-                Ingrediente4CBX.Text = "";
+                Ingrediente2CBX.Text = "No Disponible";
+                Ingrediente3CBX.Text = "No Disponible";
+                Ingrediente4CBX.Text = "No Disponible";
                 aux1 = 80 + (1 * 10);
                 aux2 = Convert.ToInt32(this.txtTotal.Text);
                 SumaAux = aux1 + aux2;
@@ -110,8 +161,9 @@ namespace Pizzaria_eddy.Ordenar
                 Ingrediente2CBX.Enabled = true;
                 Ingrediente3CBX.Enabled = false;
                 Ingrediente4CBX.Enabled = false;
-                Ingrediente3CBX.Text = "";
-                Ingrediente4CBX.Text = "";
+                Ingrediente2CBX.Text = "";
+                Ingrediente3CBX.Text = "No Disponible";
+                Ingrediente4CBX.Text = "No Disponible";
                 aux1 = 80 + (2 * 10);
                 aux2 = Convert.ToInt32(this.txtTotal.Text);
                 SumaAux = aux1 + aux2;
@@ -124,7 +176,9 @@ namespace Pizzaria_eddy.Ordenar
                 Ingrediente2CBX.Enabled = true;
                 Ingrediente3CBX.Enabled = true;
                 Ingrediente4CBX.Enabled = false;
-                Ingrediente4CBX.Text = "";
+                Ingrediente2CBX.Text = "";
+                Ingrediente3CBX.Text = "";
+                Ingrediente4CBX.Text = "No Disponible";
                 aux1 = 80 + (3 * 10);
                 aux2 = Convert.ToInt32(this.txtTotal.Text);
                 SumaAux = aux1 + aux2;
@@ -137,6 +191,9 @@ namespace Pizzaria_eddy.Ordenar
                 Ingrediente2CBX.Enabled = true;
                 Ingrediente3CBX.Enabled = true;
                 Ingrediente4CBX.Enabled = true;
+                Ingrediente2CBX.Text = "";
+                Ingrediente3CBX.Text = "";
+                Ingrediente4CBX.Text = "";
                 aux1 = 80 + (4 * 10);
                 aux2 = Convert.ToInt32(this.txtTotal.Text);
                 SumaAux = aux1 + aux2;
@@ -231,6 +288,9 @@ namespace Pizzaria_eddy.Ordenar
                 SaborCBX.Enabled = false;
                 TamanoCBX.Enabled = false;
                 CantidadCBX.Enabled = false;
+                SaborCBX.Text = "";
+                TamanoCBX.Text = "";
+                CantidadCBX.Text = "";
             }
         }
         #endregion
@@ -248,6 +308,7 @@ namespace Pizzaria_eddy.Ordenar
             {
                 EnabledBox();
                 IngredientesCBX.Enabled = false;
+                IngredientesCBX.Text = "";
                 Ingrediente1CBX.Text = "Piña";
                 Ingrediente2CBX.Text = "Jamon";
                 Ingrediente3CBX.Text = "Mozzarella";
@@ -259,6 +320,7 @@ namespace Pizzaria_eddy.Ordenar
             {
                 EnabledBox();
                 IngredientesCBX.Enabled = false;
+                IngredientesCBX.Text = "";
                 Ingrediente1CBX.Text = "Pepperoni";
                 Ingrediente2CBX.Text = "Mozzarella";
                 Ingrediente3CBX.Text = "Salami";
@@ -270,6 +332,7 @@ namespace Pizzaria_eddy.Ordenar
             {
                 EnabledBox();
                 IngredientesCBX.Enabled = false;
+                IngredientesCBX.Text = "";
                 Ingrediente1CBX.Text = "Tomate";
                 Ingrediente2CBX.Text = "Jamon";
                 Ingrediente3CBX.Text = "Champiñones y Setas";
@@ -281,6 +344,7 @@ namespace Pizzaria_eddy.Ordenar
             {
                 EnabledBox();
                 IngredientesCBX.Enabled = false;
+                IngredientesCBX.Text = "";
                 Ingrediente1CBX.Text = "Pimientos";
                 Ingrediente2CBX.Text = "Champiñones";
                 Ingrediente3CBX.Text = "Aceitunas";
@@ -302,7 +366,8 @@ namespace Pizzaria_eddy.Ordenar
         private void buttonPersonalizar_Click(object sender, EventArgs e)
         {
             LimpiarCajas();
-            
+            TipoCBX.Text = "Perzonalizada";
+            TipoCBX.Enabled = true;
         }
         /*
       /////////////////Precios//////////////////

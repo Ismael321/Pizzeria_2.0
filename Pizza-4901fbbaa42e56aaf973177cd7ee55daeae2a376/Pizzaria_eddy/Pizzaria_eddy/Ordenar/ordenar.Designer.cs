@@ -72,15 +72,15 @@
             this.Si_RadioButton2 = new System.Windows.Forms.RadioButton();
             this.No_RadioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LabelDomicilio = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.LabelNumero = new System.Windows.Forms.Label();
-            this.LabelCalle = new System.Windows.Forms.Label();
-            this.txtCalle = new System.Windows.Forms.TextBox();
-            this.LabelY = new System.Windows.Forms.Label();
-            this.txtCalle2 = new System.Windows.Forms.TextBox();
-            this.LabelComentarios = new System.Windows.Forms.Label();
             this.richtextComentario = new System.Windows.Forms.RichTextBox();
+            this.LabelComentarios = new System.Windows.Forms.Label();
+            this.txtCalle2 = new System.Windows.Forms.TextBox();
+            this.LabelY = new System.Windows.Forms.Label();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.LabelCalle = new System.Windows.Forms.Label();
+            this.LabelNumero = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.LabelDomicilio = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LabelTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -112,7 +112,7 @@
             this.Box_tamano.Name = "Box_tamano";
             this.Box_tamano.Size = new System.Drawing.Size(150, 24);
             this.Box_tamano.TabIndex = 1;
-            this.Box_tamano.Text = " Seleccione Una Opcion";
+            this.Box_tamano.Text = "Seleccione Una Opcion";
             this.Box_tamano.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_tamano_KeyPress);
             // 
             // IngredientesCBX
@@ -129,6 +129,7 @@
             this.IngredientesCBX.Name = "IngredientesCBX";
             this.IngredientesCBX.Size = new System.Drawing.Size(91, 23);
             this.IngredientesCBX.TabIndex = 2;
+            this.IngredientesCBX.Text = "0";
             this.IngredientesCBX.SelectedIndexChanged += new System.EventHandler(this.IngredientesCBX_SelectedIndexChanged);
             this.IngredientesCBX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IngredientesCBX_KeyPress);
             // 
@@ -395,11 +396,13 @@
             // No_radiobutton
             // 
             this.No_radiobutton.AutoSize = true;
+            this.No_radiobutton.Checked = true;
             this.No_radiobutton.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.No_radiobutton.Location = new System.Drawing.Point(141, 306);
             this.No_radiobutton.Name = "No_radiobutton";
             this.No_radiobutton.Size = new System.Drawing.Size(47, 23);
             this.No_radiobutton.TabIndex = 7;
+            this.No_radiobutton.TabStop = true;
             this.No_radiobutton.Text = "No";
             this.No_radiobutton.UseVisualStyleBackColor = true;
             this.No_radiobutton.CheckedChanged += new System.EventHandler(this.No_radiobutton_CheckedChanged);
@@ -428,7 +431,7 @@
             this.TipoCBX.Name = "TipoCBX";
             this.TipoCBX.Size = new System.Drawing.Size(130, 24);
             this.TipoCBX.TabIndex = 0;
-            this.TipoCBX.Text = " Seleccione Una Opcion";
+            this.TipoCBX.Text = "Seleccione Una Opcion";
             this.TipoCBX.SelectedIndexChanged += new System.EventHandler(this.TipoCBX_SelectedIndexChanged);
             this.TipoCBX.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TipoCBX_KeyPress);
             // 
@@ -453,7 +456,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pizzaria_eddy.Properties.Resources.pizza;
+            this.pictureBox1.Image = global::Pizzaria_eddy.Properties.Resources.baterias_celulares_D_NP_910404_MLM28489142012_102018_Q;
             this.pictureBox1.Location = new System.Drawing.Point(842, 95);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -597,7 +600,6 @@
             this.Si_RadioButton2.Name = "Si_RadioButton2";
             this.Si_RadioButton2.Size = new System.Drawing.Size(41, 23);
             this.Si_RadioButton2.TabIndex = 11;
-            this.Si_RadioButton2.TabStop = true;
             this.Si_RadioButton2.Text = "Si";
             this.Si_RadioButton2.UseVisualStyleBackColor = true;
             this.Si_RadioButton2.CheckedChanged += new System.EventHandler(this.Si_RadioButton2_CheckedChanged);
@@ -605,6 +607,7 @@
             // No_RadioButton2
             // 
             this.No_RadioButton2.AutoSize = true;
+            this.No_RadioButton2.Checked = true;
             this.No_RadioButton2.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.No_RadioButton2.Location = new System.Drawing.Point(99, 21);
             this.No_RadioButton2.Name = "No_RadioButton2";
@@ -639,70 +642,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedido a Domicilio";
             // 
-            // LabelDomicilio
+            // richtextComentario
             // 
-            this.LabelDomicilio.AutoSize = true;
-            this.LabelDomicilio.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDomicilio.Location = new System.Drawing.Point(333, 78);
-            this.LabelDomicilio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelDomicilio.Name = "LabelDomicilio";
-            this.LabelDomicilio.Size = new System.Drawing.Size(76, 19);
-            this.LabelDomicilio.TabIndex = 104;
-            this.LabelDomicilio.Text = "Domicilio";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Location = new System.Drawing.Point(643, 75);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(76, 22);
-            this.txtNumero.TabIndex = 14;
-            // 
-            // LabelNumero
-            // 
-            this.LabelNumero.AutoSize = true;
-            this.LabelNumero.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelNumero.Location = new System.Drawing.Point(600, 78);
-            this.LabelNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelNumero.Name = "LabelNumero";
-            this.LabelNumero.Size = new System.Drawing.Size(42, 19);
-            this.LabelNumero.TabIndex = 111;
-            this.LabelNumero.Text = "Num";
-            // 
-            // LabelCalle
-            // 
-            this.LabelCalle.AutoSize = true;
-            this.LabelCalle.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelCalle.Location = new System.Drawing.Point(5, 104);
-            this.LabelCalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelCalle.Name = "LabelCalle";
-            this.LabelCalle.Size = new System.Drawing.Size(45, 19);
-            this.LabelCalle.TabIndex = 112;
-            this.LabelCalle.Text = "Calle";
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.Location = new System.Drawing.Point(10, 126);
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(199, 22);
-            this.txtCalle.TabIndex = 15;
-            // 
-            // LabelY
-            // 
-            this.LabelY.AutoSize = true;
-            this.LabelY.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelY.Location = new System.Drawing.Point(224, 126);
-            this.LabelY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelY.Name = "LabelY";
-            this.LabelY.Size = new System.Drawing.Size(16, 19);
-            this.LabelY.TabIndex = 114;
-            this.LabelY.Text = "y";
-            // 
-            // txtCalle2
-            // 
-            this.txtCalle2.Location = new System.Drawing.Point(255, 126);
-            this.txtCalle2.Name = "txtCalle2";
-            this.txtCalle2.Size = new System.Drawing.Size(199, 22);
-            this.txtCalle2.TabIndex = 16;
+            this.richtextComentario.Location = new System.Drawing.Point(463, 153);
+            this.richtextComentario.Name = "richtextComentario";
+            this.richtextComentario.Size = new System.Drawing.Size(324, 83);
+            this.richtextComentario.TabIndex = 17;
+            this.richtextComentario.Text = "";
             // 
             // LabelComentarios
             // 
@@ -715,13 +661,70 @@
             this.LabelComentarios.TabIndex = 117;
             this.LabelComentarios.Text = "Comentarios";
             // 
-            // richtextComentario
+            // txtCalle2
             // 
-            this.richtextComentario.Location = new System.Drawing.Point(463, 153);
-            this.richtextComentario.Name = "richtextComentario";
-            this.richtextComentario.Size = new System.Drawing.Size(324, 83);
-            this.richtextComentario.TabIndex = 17;
-            this.richtextComentario.Text = "";
+            this.txtCalle2.Location = new System.Drawing.Point(255, 126);
+            this.txtCalle2.Name = "txtCalle2";
+            this.txtCalle2.Size = new System.Drawing.Size(199, 22);
+            this.txtCalle2.TabIndex = 16;
+            // 
+            // LabelY
+            // 
+            this.LabelY.AutoSize = true;
+            this.LabelY.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelY.Location = new System.Drawing.Point(224, 126);
+            this.LabelY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelY.Name = "LabelY";
+            this.LabelY.Size = new System.Drawing.Size(16, 19);
+            this.LabelY.TabIndex = 114;
+            this.LabelY.Text = "y";
+            // 
+            // txtCalle
+            // 
+            this.txtCalle.Location = new System.Drawing.Point(10, 126);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(199, 22);
+            this.txtCalle.TabIndex = 15;
+            // 
+            // LabelCalle
+            // 
+            this.LabelCalle.AutoSize = true;
+            this.LabelCalle.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCalle.Location = new System.Drawing.Point(5, 104);
+            this.LabelCalle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelCalle.Name = "LabelCalle";
+            this.LabelCalle.Size = new System.Drawing.Size(45, 19);
+            this.LabelCalle.TabIndex = 112;
+            this.LabelCalle.Text = "Calle";
+            // 
+            // LabelNumero
+            // 
+            this.LabelNumero.AutoSize = true;
+            this.LabelNumero.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelNumero.Location = new System.Drawing.Point(600, 78);
+            this.LabelNumero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelNumero.Name = "LabelNumero";
+            this.LabelNumero.Size = new System.Drawing.Size(42, 19);
+            this.LabelNumero.TabIndex = 111;
+            this.LabelNumero.Text = "Num";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(643, 75);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(76, 22);
+            this.txtNumero.TabIndex = 14;
+            // 
+            // LabelDomicilio
+            // 
+            this.LabelDomicilio.AutoSize = true;
+            this.LabelDomicilio.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDomicilio.Location = new System.Drawing.Point(333, 78);
+            this.LabelDomicilio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelDomicilio.Name = "LabelDomicilio";
+            this.LabelDomicilio.Size = new System.Drawing.Size(76, 19);
+            this.LabelDomicilio.TabIndex = 104;
+            this.LabelDomicilio.Text = "Domicilio";
             // 
             // timer1
             // 
